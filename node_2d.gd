@@ -3,10 +3,12 @@ extends Node2D
 @onready var marker_2d: Marker2D = $Sprite2D/Marker2D
 @export var bullet_scene: PackedScene
 @export var fire_rate: float = 0.1
+@onready var label: Label = %Label
 
 var active_timer: Timer
 
-@onready var label: Label = $"../Label"
+
+
 
 var can_shoot = true
 

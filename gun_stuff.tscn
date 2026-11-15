@@ -10,6 +10,7 @@ radius = 23.0
 [node name="Gun_Stuff" type="Node2D" unique_id=76689925]
 
 [node name="Label" type="Label" parent="." unique_id=1540110863]
+unique_name_in_owner = true
 offset_left = 67.0
 offset_top = 40.0
 offset_right = 107.0
@@ -26,8 +27,8 @@ shape = SubResource("CircleShape2D_pb0pp")
 [node name="Sprite2D" type="Sprite2D" parent="Test_Player" unique_id=931771096]
 texture = ExtResource("2_1xgw2")
 
-[node name="Node2D" parent="." unique_id=14346443 instance=ExtResource("2_xmwwm")]
-position = Vector2(41, 212)
+[node name="Node2D" parent="Test_Player" unique_id=14346443 instance=ExtResource("2_xmwwm")]
+position = Vector2(-81, 6)
 
 [node name="Node2D2" parent="." unique_id=1156668248 instance=ExtResource("1_4yfwu")]
 position = Vector2(-40, 229)
