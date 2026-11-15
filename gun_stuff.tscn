@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://de86twa4ieoaf"]
 
-[ext_resource type="PackedScene" uid="uid://cfcobecgpepx4" path="res://Sword_Swing.tscn" id="1_4yfwu"]
 [ext_resource type="Texture2D" uid="uid://dn25y60n852t7" path="res://sword_trail.png" id="2_1xgw2"]
 [ext_resource type="PackedScene" uid="uid://h8ii6sw2bqf5" path="res://pistol_gun.tscn" id="2_xmwwm"]
 
@@ -29,6 +28,3 @@ texture = ExtResource("2_1xgw2")
 
 [node name="Node2D" parent="Test_Player" unique_id=14346443 instance=ExtResource("2_xmwwm")]
 position = Vector2(-81, 6)
-
-[node name="Node2D2" parent="." unique_id=1156668248 instance=ExtResource("1_4yfwu")]
-position = Vector2(-40, 229)

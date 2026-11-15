@@ -136,11 +136,64 @@ tracks/2/keys = {
 "values": [false, true]
 }
 
+[sub_resource type="Animation" id="Animation_bdyy0"]
+resource_name = "Sword_swing_left"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 1, 1.4, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.4363323129985824, -0.8726646259971648, -1.3089969389957472, -1.6580627893946132, -0.4363323129985824, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D2:flip_v")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bdyy0"]
 _data = {
 &"Idle": SubResource("Animation_ekirb"),
 &"RESET": SubResource("Animation_167vy"),
-&"Sword_swing": SubResource("Animation_k31tj")
+&"Sword_swing": SubResource("Animation_k31tj"),
+&"Sword_swing_left": SubResource("Animation_bdyy0")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pb0pp"]
@@ -150,7 +203,6 @@ height = 76.0
 [node name="Node2D" type="Node2D" unique_id=1156668248]
 position = Vector2(-4, 6.0000005)
 script = ExtResource("1_ekirb")
-swing_rate = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=258366763]
 position = Vector2(-1.9052339, 1.1705058)
@@ -158,6 +210,14 @@ texture = ExtResource("1_3qcyj")
 offset = Vector2(1, -20)
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2032722730]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-17.439575, -36.219624)
+rotation = -0.7853982
+texture = ExtResource("2_ekirb")
+centered = false
+offset = Vector2(-48, -35)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1573053838]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-17.439575, -36.219624)
 rotation = -0.7853982

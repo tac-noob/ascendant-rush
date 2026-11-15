@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dqiln1yxektyr" path="res://001-Layer-1.png" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://bverwtna05a4s" path="res://New Piskel-1.png (1).png" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://dlqjm0bse0hr7" path="res://untitled@3x (1).png" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://cfcobecgpepx4" path="res://Sword_Swing.tscn" id="4_0hol4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4hqt"]
 size = Vector2(720, 98)
@@ -66,3 +67,15 @@ shape = SubResource("RectangleShape2D_y4hqt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D2/StaticBody2D/CollisionShape2D" unique_id=1634142828]
 texture = ExtResource("1_wtcfe")
+
+[node name="Label" type="Label" parent="." unique_id=384015161]
+unique_name_in_owner = true
+offset_left = 67.0
+offset_top = 40.0
+offset_right = 107.0
+offset_bottom = 63.0
+text = "Hi "
+
+[node name="Node2D" parent="." unique_id=1156668248 instance=ExtResource("4_0hol4")]
+position = Vector2(256, 489)
+swing_rate = 0.1
