@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://de86twa4ieoaf"]
+
+[ext_resource type="PackedScene" uid="uid://cfcobecgpepx4" path="res://Sword_Swing.tscn" id="1_4yfwu"]
+[ext_resource type="Texture2D" uid="uid://dn25y60n852t7" path="res://sword_trail.png" id="2_1xgw2"]
+[ext_resource type="PackedScene" uid="uid://h8ii6sw2bqf5" path="res://pistol_gun.tscn" id="2_xmwwm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pb0pp"]
+radius = 23.0
+
+[node name="Gun_Stuff" type="Node2D" unique_id=76689925]
+
+[node name="Label" type="Label" parent="." unique_id=1540110863]
+offset_left = 67.0
+offset_top = 40.0
+offset_right = 107.0
+offset_bottom = 63.0
+text = "Hi "
+
+[node name="Test_Player" type="CharacterBody2D" parent="." unique_id=331430166 groups=["Player"]]
+position = Vector2(122, 206)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Test_Player" unique_id=1571477538]
+position = Vector2(-11, -25)
+shape = SubResource("CircleShape2D_pb0pp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Test_Player" unique_id=931771096]
+texture = ExtResource("2_1xgw2")
+
+[node name="Node2D" parent="." unique_id=14346443 instance=ExtResource("2_xmwwm")]
+position = Vector2(41, 212)
+
+[node name="Node2D2" parent="." unique_id=1156668248 instance=ExtResource("1_4yfwu")]
+position = Vector2(-40, 229)

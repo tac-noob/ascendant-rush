@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cesv5p45p7qri"]
+
+[ext_resource type="Script" uid="uid://65o7qxw16k8x" path="res://node_2d.gd" id="1_fry05"]
+[ext_resource type="PackedScene" uid="uid://banvf0a57lrtg" path="res://bullet.tscn" id="2_7c1qe"]
+[ext_resource type="Texture2D" uid="uid://4uq6nwj7xue4" path="res://Sniper2.png" id="2_fry05"]
+
+[node name="Node2D" type="Node2D" unique_id=14346443 groups=["Guns"]]
+rotation = -1.3630828
+script = ExtResource("1_fry05")
+bullet_scene = ExtResource("2_7c1qe")
+fire_rate = 0.2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=891917513]
+position = Vector2(21, -4)
+texture = ExtResource("2_fry05")
+
+[node name="Marker2D" type="Marker2D" parent="Sprite2D" unique_id=1491106049]
+position = Vector2(46, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=526696354]

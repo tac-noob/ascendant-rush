@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://h8ii6sw2bqf5"]
+
+[ext_resource type="Script" uid="uid://65o7qxw16k8x" path="res://node_2d.gd" id="1_o8n63"]
+[ext_resource type="Texture2D" uid="uid://0itiehdoc227" path="res://Gun_Sprite.png" id="2_o8n63"]
+[ext_resource type="PackedScene" uid="uid://bxv7gn42p8t55" path="res://pistol_button.tscn" id="2_q3akd"]
+
+[node name="Node2D" type="Node2D" unique_id=14346443 groups=["Guns"]]
+script = ExtResource("1_o8n63")
+bullet_scene = ExtResource("2_q3akd")
+fire_rate = 1.5
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=891917513]
+position = Vector2(13, -3)
+texture = ExtResource("2_o8n63")
+
+[node name="Marker2D" type="Marker2D" parent="Sprite2D" unique_id=1491106049]
+position = Vector2(3.0501785, -3.1125884)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=526696354]
